@@ -26,4 +26,14 @@ public class StatusController {
         delta.put("status", "Online");
         return delta;
     }
+
+    @GetMapping("/api/race")
+    public Map<String, Object> getRaceInfo() {
+        Map<String, Object> race = new HashMap<>();
+        race.put("track", "Monaco");
+        race.put("raceStatus", "Not Started");
+        race.put("currentLap", 1);
+        race.put("totalLaps", 78);
+        return race;
+    }
 }
